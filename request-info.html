@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Info</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Request More Info</h1>
+    </header>
+
+   <!-- Form Section -->
+<section class="form-container">
+    <form id="infoForm" onsubmit="sendToWhatsApp(event)">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="company">Company name:</label>
+        <input type="text" id="company" name="Company" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="query">Query:</label>
+        <input type="text" id="query" name="question" required>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+    
+    // Get form values
+    const formData = {
+        name: document.getElementById('fullName').value,
+        company: document.getElementById('company').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        query: document.getElementById('query').value,
+        country: document.getElementById('country').value
+    };
+    
+    // Format the message
+    const message = `New Inquiry:%0A%0A
+*Name:* ${formData.name}%0A
+*Company:* ${formData.company}%0A
+*Email:* ${formData.email}%0A
+*Phone:* ${formData.phone}%0A
+*Query:* ${formData.query}%0A
+*Country:* ${formData.country}`;
+    
+    // Create WhatsApp link
+    const whatsappUrl = `https://wa.me/18254503244?text=${message}`;
+    
+    // Open in new tab
+    window.open(whatsappUrl, '_blank');
+    
+    // Optional: Reset form after submission
+    event.target.reset();
+}
+</script>
+
+    <!-- Back Button -->
+    <div class="back-container">
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+
+    <!-- WhatsApp Icon -->
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/18254503244" target="_blank">
+            <img src="images/whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="social-icons">
+            <a href="mailto:support@greenfueltrading.info">
+                <img src="images/email.png" alt="Email">
+            </a>
+            <a href="https://https://www.facebook.com/share/15ihSrdRYd/?mibextid=wwXlfr" target="_blank">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+        </div>
+        <div class="footer-info">
+            <p><strong>Address:</strong> 343 Preston Str. 11th Floor, Ottawa, ON K1S 1N4, Canada</p>
+            <p><strong>Opening Hours:</strong> Mon - Fri, 9 AM - 5 PM</p>
+            <p><strong>Tel:</strong> +18254503244</p>
+            <p><strong>Email:</strong> support@greenfueltrading.info</p>
+        </div>
+    </div>
+    <p>&copy; 2024 Green Fuel Trading Inc. All rights reserved.</p>
+</footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

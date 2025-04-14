@@ -1,0 +1,583 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Navigation */
+header {
+    background: rgb(113, 146, 112);
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* Top Background - Sliding Images */
+.top-background {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+/* Sliding Background with Multiple Images */
+.scrolling-images {
+    display: flex;
+    width: 100%; /* 3 images, so 100% * 3 */
+    height: 100%;
+    animation: scrollBg 15s linear infinite;
+}
+
+/* Individual Images */
+.scrolling-images img {
+    width: 100vw; /* Each image takes full viewport width */
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Keyframes for Smooth Scrolling */
+@keyframes scrollBg {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100vw); }
+    66% { transform: translateX(-200vw); }
+    100% { transform: translateX(0); }
+}
+
+/* Overlay Text on Top Background */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+}
+
+/* Style for Heading and Paragraph */
+.overlay-text h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.overlay-text p {
+    font-size: 18px;
+}
+
+/* Countdown Section */
+.countdown-section {
+    padding: 50px 0;
+}
+
+.countdown {
+    font-size: 50px;
+    font-weight: bold;
+    color: red;
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.whatsapp-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Footer */
+footer {
+    background: rgb(160, 202, 151); /* Solid blue background */
+    padding: 40px;
+    color: white;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Social Media Icons */
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer Info */
+.footer-info p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Request Info Button */
+.request-info-btn {
+    background: black;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.request-info-btn:hover {
+    background: darkblue;
+}
+
+/* Form Container */
+.form-container {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Form Fields */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+form button {
+    background: navy;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background: darkblue;
+}
+
+/* Back Button */
+.back-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.back-btn {
+    text-decoration: none;
+    font-size: 16px;
+    color: navy;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+/* About Us Banner (Top Background Image) */
+.about-banner {
+    background: url('images/about-bg.avif') center/cover no-repeat;
+    height: 300px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+/* Dark overlay to improve text visibility */
+.about-banner .overlay {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* About Content */
+.about-content {
+    padding: 50px;
+    text-align: center;
+}
+
+.about-content h2 {
+    color: navy;
+}
+
+.about-content p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Values We Live By Section */
+.values-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f4f4f4; /* Light grey background */
+}
+
+.values-section h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: navy;
+    margin-bottom: 30px;
+}
+
+/* Container for Values */
+.values-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+/* Individual Value Box */
+.value-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.value-box:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+/* Icons for Values */
+.value-box img {
+    width: 60px; /* Adjust size of icons */
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+/* Title of Each Value */
+.value-box h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: navy;
+    margin-bottom: 10px;
+}
+
+/* Description of Each Value */
+.value-box p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Who We Are Section */
+.who-we-are {
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+}
+
+.who-we-are h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: navy;
+    margin-bottom: 30px;
+}
+
+/* Container for Who We Are */
+.who-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    background: #f4f4f4;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Who We Are Icon */
+.who-container img {
+    width: 70px; /* Adjust icon size */
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+/* Who We Are Text */
+.who-container p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* OUR SERVICES Section */
+.services-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f4f4f4;
+}
+
+.services-section h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: navy;
+    margin-bottom: 40px;
+}
+
+/* Container for Services */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Individual Service Box */
+.service-box {
+    background: rgb(127, 223, 120);
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Service Icons */
+.service-icon img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+/* Service Title */
+.service-box h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Service Description */
+.service-box p {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+/* Logo Styling */
+.logo img {
+    width: 150px; /* Adjust based on your logo size */
+    height: auto;
+}
+
+
+
+.service-image img {
+    width: 100%;       /* Fills container width */
+    max-width: 300px;  /* Limits maximum size */
+    height: auto;      /* Maintains aspect ratio */
+    display: block;    /* Removes extra space below image */
+    margin: 0 auto;    /* Centers the image */
+}
+
+/* General Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #006400; /* Deep Green */
+}
+
+.section-image {
+    width: 90%;
+    max-width: 700px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Section */
+.mission-section {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Products Grid */
+.products-section {
+    background-color: #eef6f0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 128, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    color: #004d00;
+    margin-bottom: 10px;
+}
+
+/* Sustainability Section */
+.sustainability-section {
+    background-color: #e0f7ea;
+    color: #004d00;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #fff;
+    color: #333;
+}
+
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+.why-choose-us li {
+    padding: 10px 0;
+    font-size: 1.1em;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding-left: 25px;
+}
+
+.why-choose-us li::before {
+    content: '✔️';
+    position: absolute;
+    left: 0;
+    color: green;
+}
+
+
+.see-more-link {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.see-more-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #006400;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.see-more-link a:hover {
+    background-color: #004d00;
+}
